@@ -15,7 +15,7 @@ $bill_url ="https://swapi.dev/api/films/";
     while($row_user = mysqli_fetch_assoc($result)){
         $userDetails[] = $row_user;
     }
-    $user_req = array_chunk($userDetails,37,true);
+    $user_req = array_chunk($userDetails,2,true);
     foreach($user_req as $req){
         foreach($req as $sub_req_keys => $sub_req_val){
            $url = $bill_url.$sub_req_val['id'];
